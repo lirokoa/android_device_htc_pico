@@ -10,9 +10,10 @@ Whats Working-
  - Incall Audio only (libaudio still broken)
  - Usb Mass Storage
  - Audio (many need some tweaks)
+ - Bluetooth
+ - Usb tethering
 
 What Doesnt work-
  - Camera
- - Bluetooth
  - Video Playback
  - Everything else
