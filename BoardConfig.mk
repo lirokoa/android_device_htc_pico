@@ -24,8 +24,8 @@ BOARD_USES_QCOM_LIBRPC := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_USE_NEW_LIBRIL_HTC := true
 BOARD_USE_QCOM_PMEM := true
-BOARD_CAMERA_USE_GETBUFFERINFO := true
-BOARD_OVERLAY_FORMAT_YCbCr_420_SP := true:= true
+#BOARD_CAMERA_USE_GETBUFFERINFO := true
+#BOARD_OVERLAY_FORMAT_YCbCr_420_SP := true:= true
 
 TARGET_USES_NEW_LIBSENSORS_HAL:=true
 
@@ -39,6 +39,9 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := pico
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
 BOARD_USE_USB_MASS_STORAGE_SWITCH := true
+BOARD_CUSTOM_USB_CONTROLLER := ../../device/htc/pico/UsbController.cpp
+
+HARDWARE_OMX := true
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
@@ -46,13 +49,13 @@ WPA_SUPPLICANT_VERSION      := VER_0_6_X
 BOARD_WLAN_DEVICE           := bcm4330
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/bcm4330.ko"
 WIFI_DRIVER_FW_STA_PATH     := "/system/etc/firmware/fw_bcm4330b2.bin"
-WIFI_DRIVER_FW_AP_PATH      := "/system/etc/firmware/fw_bcm4330b2_a1psta.bin"
+WIFI_DRIVER_FW_AP_PATH      := "/system/etc/firmware/fw_bcm4330b2_apsta.bin"
 WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/etc/firmware/fw_bcm4330b2.bin nvram_path=/proc/calibration"
 WIFI_DRIVER_MODULE_NAME     := "bcm4330"
-WIFI_DRIVER_HAS_HTC_SOFTAP  := true
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x12c00000
+BOARD_KERNEL_NEW_PPPOX := true
 BOARD_PAGE_SIZE := 0x00000800
 
 # fix this up by examining /proc/mtd on a running device
