@@ -55,8 +55,6 @@ PRODUCT_COPY_FILES += \
  
 # Some build properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    htc.audio.alt.enable=1 \
-    htc.audio.hac.enable=1 \
     ro.com.google.networklocation=1 \
     ro.com.google.gmsversion=2.2_r8 \
     ro.setupwizard.enable_bypass=1 \
@@ -125,8 +123,8 @@ PRODUCT_COPY_FILES += \
     device/htc/pico/prebuilt/etc/AudioPara4.csv:system/etc/AudioPara4.csv \
     device/htc/pico/prebuilt/etc/AudioPara4_WB.csv:system/etc/AudioPara4_WB.csv \
     device/htc/pico/prebuilt/etc/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \
-    vendor/htc/pico/proprietary/lib/libaudioeq.so:system/lib/libaudioeq.so \
     vendor/htc/pico/proprietary/lib/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \
+    vendor/htc/pico/proprietary/lib/libaudioeq.so:system/lib/libaudioeq.so \
     
 # Device permissions
 PRODUCT_COPY_FILES += \
